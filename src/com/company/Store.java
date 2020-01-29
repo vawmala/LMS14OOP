@@ -7,14 +7,32 @@ public class Store {
     Cashier cashier;
     Guard guard;
     Client client;
+    Employee employee;
 
-    public Store(String title, String address, Manager manager, Cashier cashier, Guard guard, Client client) {
+    public Store (String title, String address) {
         this.title = title;
         this.address = address;
+        this.manager = new Manager();
+        this.cashier = new Cashier();
+        this.client = new Client();
+        this.guard = new Guard();
+        this.employee = new Employee();
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public Manager getManager() {
+        return manager;
+    }
+
+    public void setManager(Manager manager) {
         this.manager = manager;
-        this.cashier = cashier;
-        this.guard = guard;
-        this.client = client;
     }
 
     public Store(String title) {
